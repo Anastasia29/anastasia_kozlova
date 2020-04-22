@@ -1,0 +1,114 @@
+<div class="col-12 row">
+  <div class="col-4">
+    <img class="my-photo" src="../assets/bild2b.jpg" />
+  </div>
+  <div class="col-8">
+    <p class="my-bio">
+      Hi, I’m Anastasia! Currently, I am an engineering intern at Mercedes-Benz
+      Research & Development North America. While I'm working primarily as a
+      programmer in a technical role, my undergraduate degree is in
+      Communication Science. While I was completing a Communication Science
+      major, I was also progressing through a minor in Computer Science, which
+      hooked me into how fascinating the process of solving problems via
+      programming is. I have realized that Computer Science related subjects
+      were always more interesting and relevant for me and my goals. My main
+      responsibility now is software development of digital assistants
+      integration. I develop and debug Mercedes car-services availability
+      through Alexa and Google Assistant. Within our voice service, I’ve built
+      multiple features for car controls and infotainment. Besides that, I work
+      on the frontend of our internal tool and help with implementing new
+      features. At work, I mainly use JavaScript and its frameworks - Node.js
+      and Vue.js. Anyway, that's a bit about me. In the modules available via
+      the buttons above on the toolbar, you can flip through a virtual version
+      of my resume for anything else you'd like to know.
+    </p>
+  </div>
+
+  <div class="col-12">
+    <hr class="zeile" />
+  </div>
+
+  <div class="col-12 mt-5 d-flex justify-content-center align-items-center">
+    <div class="col-4">
+      <img class="uni-logo" src="../assets/free_uni.png" />
+    </div>
+    <div class="col-8">
+      <div class="row" id="education-name">
+        <h2>Freie Universität Berlin</h2>
+      </div>
+      <div class="row" id="education-date">
+        <h4>Graduated in August 2019</h4>
+      </div>
+      <div class="row" id="education-location">
+        <h4>Berlin, Germany</h4>
+      </div>
+      <div class="row" id="education-subject">
+        <h4>Bachelors Degree in Communication Sceince and Computer Science</h4>
+      </div>
+
+      <div class="row" id="more-info">
+        <button class="btn btn-primary" (click)="toggleShowMoreInfo()">
+          {{
+            showMoreInfo === true
+              ? 'Close info'
+              : 'Show more info about my education'
+          }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showMoreInfo" class="col-12 my-5">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <h4 class="modal-title" id="modal-basic-title">
+            Major in Communication Science
+          </h4>
+        </div>
+      </div>
+      <div class="card-body">
+        <h6>Related coursework:</h6>
+        <ul>
+          <li>
+            <h6>
+              Epistemological principles, data collection and statistics
+            </h6>
+          </li>
+          <li>
+            <h6>Media impact and publicity</h6>
+          </li>
+          <li>
+            <h6>Perspectives of public communication</h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <h4 class="modal-title" id="modal-basic-title">
+            Minor in Computer Science
+          </h4>
+        </div>
+      </div>
+      <div class="card-body">
+        <h6>Related coursework:</h6>
+        <ul>
+          <li>
+            <h6>Functional and object-oriented programming</h6>
+          </li>
+          <li>
+            <h6>Fundamentals of theoretical informatics</h6>
+          </li>
+          <li>
+            <h6>Algorithms, data structures and data abstraction</h6>
+          </li>
+          <li>
+            <h6>Database systems</h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
